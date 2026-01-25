@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
-import { ServiceWorkerRegister } from '@/components/ServiceWorkerRegister/ServiceWorkerRegister';
-// Components
 import { Sidebar, SidebarNavItem } from '@/components/Sidebar/Sidebar';
 import { NAVS } from '@/data/constants';
 import styles from './layout.module.css';
@@ -22,6 +20,7 @@ export const metadata: Metadata = {
   title: 'Achmad Ahlar Ridha - Web Developer Portfolio',
   description:
     'Portfolio of Achmad Ahlar Ridha - Front End Web Developer specializing in React, Next.js, and modern JavaScript frameworks',
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -50,7 +49,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ServiceWorkerRegister />
         <div className={styles.container}>
           <Sidebar sectionIds={sectionIds}>{navs}</Sidebar>
           <main className={styles.main}>{children}</main>
