@@ -6,7 +6,6 @@ process.env.SERWIST_SUPPRESS_TURBOPACK_WARNING = '1';
 const withSerwist = withSerwistInit({
   swSrc: 'src/sw.ts',
   swDest: 'public/sw.js',
-  disable: process.env.NODE_ENV === 'development',
 });
 
 const nextConfig: NextConfig = {
@@ -24,9 +23,6 @@ const nextConfig: NextConfig = {
         hostname: 'img.icons8.com',
       },
     ],
-  },
-  turbopack: {
-    root: process.cwd(),
   },
 };
 
