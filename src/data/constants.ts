@@ -7,7 +7,7 @@ import jsLogo from "@/assets/logos/js-logo.svg";
 import laravelLogo from "@/assets/logos/laravel-logo.svg";
 import mysqlLogo from "@/assets/logos/mysql-logo.svg";
 import nextLogo from "@/assets/logos/nextjs-logo.svg";
-import nodeLogo from "@/assets/logos/nodejs-logo.jpg";
+import nodeLogo from "@/assets/logos/nodejs-logo.webp";
 import phpLogo from "@/assets/logos/php-logo.svg";
 import reactLogo from "@/assets/logos/react-logo.svg";
 

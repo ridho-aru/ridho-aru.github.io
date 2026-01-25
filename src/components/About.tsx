@@ -1,7 +1,7 @@
-import Image from "next/image";
-import profileImg from "@/assets/profile-1.jpg";
-import styles from "./About.module.css";
-import SectionHeader from "./SectionHeader";
+import Image from 'next/image';
+import profileImg from '@/assets/profile-1.webp';
+import styles from './About.module.css';
+import SectionHeader from './SectionHeader';
 
 export default function About() {
   return (

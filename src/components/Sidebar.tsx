@@ -13,7 +13,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import profileImg from '@/assets/profile.jpg';
+import profileImg from '@/assets/profile.webp';
 import styles from './Sidebar.module.css';
 
 // Context to share active state with children
