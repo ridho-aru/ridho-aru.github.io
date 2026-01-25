@@ -1,13 +1,17 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: "export",
-  basePath: "/my-portfolio",
+  output: 'export',
   reactCompiler: true,
   images: {
     unoptimized: true,
-    domains: ["img.icons8.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+      },
+    ],
   },
 };
 
