@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import LogoBottomRight from '../assets/logos/logo-hero-bottom-right.svg';
-import LogoTopLeft from '../assets/logos/logo-hero-top-left.svg';
+import LogoBottomRight from '../../assets/logos/logo-hero-bottom-right.svg';
+import LogoTopLeft from '../../assets/logos/logo-hero-top-left.svg';
 import styles from './Hero.module.css';
 
 export default function Hero() {

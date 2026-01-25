@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
 // Components
-import { Sidebar, SidebarNavItem } from '@/components/Sidebar';
+import { Sidebar, SidebarNavItem } from '@/components/Sidebar/Sidebar';
 import { NAVS } from '@/data/constants';
 import styles from './layout.module.css';
 

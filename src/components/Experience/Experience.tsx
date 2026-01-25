@@ -1,8 +1,8 @@
-import Image from "next/image";
-import expImg from "@/assets/right-section-experience-image.webp";
-import { EXPERIENCES } from "../data/constants";
-import styles from "./Experience.module.css";
-import SectionHeader from "./SectionHeader";
+import Image from 'next/image';
+import expImg from '@/assets/right-section-experience-image.webp';
+import { EXPERIENCES } from '../../data/constants';
+import SectionHeader from '../SectionHeader/SectionHeader';
+import styles from './Experience.module.css';
 
 export default function Experience() {
   return (
@@ -38,6 +38,8 @@ export default function Experience() {
             src={expImg}
             alt="Experience Illustration"
             className={styles.experienceImage}
+            width={400}
+            height={700}
             placeholder="blur"
           />
         </div>

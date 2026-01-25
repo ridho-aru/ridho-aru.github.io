@@ -1,9 +1,9 @@
-import Image from "next/image";
-import LogoBottomRight from "../assets/logos/logo-hero-bottom-right.svg";
-import { PORTFOLIO_ITEMS } from "../data/portfolio";
-import styles from "./PortfolioSection.module.css";
-import ProjectCard from "./ProjectCard";
-import SectionHeader from "./SectionHeader";
+import Image from 'next/image';
+import LogoBottomRight from '../../assets/logos/logo-hero-bottom-right.svg';
+import { PORTFOLIO_ITEMS } from '../../data/portfolio';
+import ProjectCard from '../ProjectCard/ProjectCard';
+import SectionHeader from '../SectionHeader/SectionHeader';
+import styles from './PortfolioSection.module.css';
 
 export default function PortfolioSection() {
   return (

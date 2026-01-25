@@ -19,6 +19,8 @@
 
 .imageWrapper {
   position: sticky;
+  display: flex;
+  justify-content: center;
   top: 100px; /* Stats visible when scrolling */
   border-radius: 20px;
   overflow: hidden;
@@ -26,13 +28,13 @@
 }
 
 .experienceImage {
-  width: 100%;
-  height: auto;
+  width: 400px;
+  height: 700px;
   display: block;
 }
 
 .timeline::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -109,10 +111,7 @@
     grid-template-columns: 1fr;
   }
   .imageWrapper {
-    display: none; /* Hide image on smaller screens if too tall, or move to bottom? 
-                    Given intended design typically uses image as side decoration, 
-                    hiding on mobile might be cleaner, or putting it at bottom. 
-                    Let's stack it at bottom for now. */
+    display: none;
     order: 2;
     position: static;
     margin-top: 40px;
@@ -123,6 +122,5 @@
 @media (max-width: 768px) {
   .section {
     padding: 60px 24px;
-    /* Redundant if using container queries for grid, but good for padding */
   }
 }

@@ -1,8 +1,8 @@
-import Image from "next/image";
-import LogoTopLeft from "../assets/logos/logo-hero-top-left.svg";
-import { SKILLS } from "../data/constants";
-import SectionHeader from "./SectionHeader";
-import styles from "./Skills.module.css";
+import Image from 'next/image';
+import LogoTopLeft from '../../assets/logos/logo-hero-top-left.svg';
+import { SKILLS } from '../../data/constants';
+import SectionHeader from '../SectionHeader/SectionHeader';
+import styles from './Skills.module.css';
 
 export default function Skills() {
   return (

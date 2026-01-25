@@ -1,9 +1,9 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Experience from "@/components/Experience";
-import Hero from "@/components/Hero";
-import PortfolioSection from "@/components/PortfolioSection";
-import Skills from "@/components/Skills";
+import About from '@/components/About/About';
+import Contact from '@/components/Contact/Contact';
+import Experience from '@/components/Experience/Experience';
+import Hero from '@/components/Hero/Hero';
+import PortfolioSection from '@/components/PortfolioSection/PortfolioSection';
+import Skills from '@/components/Skills/Skills';
 
 export default function Home() {
   return (
