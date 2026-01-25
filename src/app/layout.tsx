@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
+import { ServiceWorkerRegister } from '@/components/ServiceWorkerRegister/ServiceWorkerRegister';
 // Components
 import { Sidebar, SidebarNavItem } from '@/components/Sidebar/Sidebar';
 import { NAVS } from '@/data/constants';
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ServiceWorkerRegister />
         <div className={styles.container}>
           <Sidebar sectionIds={sectionIds}>{navs}</Sidebar>
           <main className={styles.main}>{children}</main>
