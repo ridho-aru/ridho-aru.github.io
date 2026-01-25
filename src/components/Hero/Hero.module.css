@@ -140,6 +140,7 @@
 .heroActions {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .primaryBtn,
@@ -189,5 +190,13 @@
   }
   .heroSubtitle {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroActions {
+    & > a {
+      flex: 1 1 auto;
+    }
   }
 }
