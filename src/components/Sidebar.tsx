@@ -30,36 +30,24 @@ export function Sidebar({ sectionIds, children }: SidebarProps) {
   const [activeSection, setActiveSection] = useState(sectionIds[0] || 'home');
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
-
     const handleScroll = () => {
-      // Simple debounce
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      const offset = 150;
 
-      timeoutId = setTimeout(() => {
-        const offset = 150;
-
-        for (const id of sectionIds) {
-          const element = document.getElementById(id);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= offset && rect.bottom >= offset) {
-              setActiveSection(id);
-              break;
-            }
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setActiveSection(id);
+            break;
           }
         }
-      }, 50); // 50ms delay
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initially
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (timeoutId) clearTimeout(timeoutId);
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [sectionIds]);
 
   return (
@@ -131,10 +119,16 @@ export function Sidebar({ sectionIds, children }: SidebarProps) {
 interface SidebarNavItemProps {
   id: string;
   icon: ReactNode;
+  title?: string;
   children: ReactNode;
 }
 
-export function SidebarNavItem({ id, icon, children }: SidebarNavItemProps) {
+export function SidebarNavItem({
+  id,
+  icon,
+  title,
+  children,
+}: SidebarNavItemProps) {
   const { activeSection } = useContext(SidebarContext);
   const isActive = activeSection === id;
 
@@ -142,9 +136,10 @@ export function SidebarNavItem({ id, icon, children }: SidebarNavItemProps) {
     <a
       href={`#${id}`}
       className={`${styles.navLink} ${isActive ? styles.active : ''}`}
+      title={title}
     >
       <span className={styles.navIcon}>{icon}</span>
-      {children}
+      <span className={styles.navLabel}>{children}</span>
     </a>
   );
 }

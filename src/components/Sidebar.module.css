@@ -134,6 +134,81 @@
 
 @media (max-width: 768px) {
   .sidebar {
+    /* Floating Island Design */
+    position: fixed;
+    top: auto; /* Reset top to prevent stretching */
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 380px;
+    height: auto;
+    min-height: auto;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: rgba(17, 24, 39, 0.85); /* Slightly transparent */
+    backdrop-filter: blur(12px);
+    border-radius: 24px;
+    padding: 6px;
+    height: 60px; /* Fixed height for consistency */
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+  }
+
+  .sidebarHeader,
+  .sidebarFooter {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: center; /* Center items */
+    width: 100%;
+    gap: 8px; /* Adds space between squares */
+  }
+
+  .navLink {
+    flex-direction: column;
+    padding: 0;
+    width: 48px;  /* Fixed Square Size */
+    height: 48px; /* Fixed Square Size */
+    border-radius: 12px; /* Soft square rounded corners */
+    font-size: 0; /* Hides the text label */
+    justify-content: center;
+    align-items: center;
+    color: #9ca3af;
+    vertical-align: middle;
+  }
+
+  .navLink:hover {
+    transform: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .navLink.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+  
+  .navLink.active::before {
+    display: none;
+  }
+
+  .navIcon {
+    vertical-align: middle;
+    font-size: 24px; /* Larger icon clearly visible */
+    margin-bottom: 0;
+    display: flex; /* Ensures svg centers correctly */
+  }
+  .navLabel {
     display: none;
   }
 }

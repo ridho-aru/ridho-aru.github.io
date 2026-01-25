@@ -54,4 +54,7 @@
   .section {
     padding: 60px 24px;
   }
+  .contactCard{
+    padding: 40px;
+  }
 }
