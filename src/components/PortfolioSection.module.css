@@ -32,4 +32,8 @@
   .section {
     padding: 60px 24px;
   }
+
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
 }
