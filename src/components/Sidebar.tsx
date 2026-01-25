@@ -62,6 +62,7 @@ export function Sidebar({ sectionIds, children }: SidebarProps) {
               height={100}
               className={styles.profileImage}
               priority
+              fetchPriority="high"
             />
           </div>
           <div>

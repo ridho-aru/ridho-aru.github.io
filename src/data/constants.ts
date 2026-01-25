@@ -63,7 +63,7 @@ export const EXPERIENCES = [
   {
     period: "2021 - Present",
     role: "Senior Frontend Web Developer",
-    company: "Freelance / Remote",
+    company: "Remote",
     points: [
       "Reviewing code quality and ensuring best practices",
       "Developing scalable e-commerce platforms",

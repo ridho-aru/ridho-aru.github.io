@@ -1,4 +1,4 @@
-import styles from "./Contact.module.css";
+import styles from './Contact.module.css';
 
 export default function Contact() {
   return (
@@ -7,7 +7,7 @@ export default function Contact() {
         <div className={styles.contactCard}>
           <h2>Let&apos;s Work Together</h2>
           <p>
-            I&apos;m currently available for freelance work or full-time
+            I&apos;m currently available for full-time or part-time job
             opportunities. If you have a project that needs some creative touch,
             let&apos;s chat.
           </p>
