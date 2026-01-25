@@ -41,6 +41,7 @@ export default function About() {
             className={styles.aboutImage}
             width={400}
             height={500}
+            sizes="(max-width: 600px) 350px, 400px"
             priority
           />
           <div className={styles.experienceBadge}>

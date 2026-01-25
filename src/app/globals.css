@@ -3,12 +3,6 @@
   --foreground: #171717;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -79,14 +73,10 @@ html {
   *,
   *::before,
   *::after {
-    /* biome-ignore lint/complexity/noImportantStyles: Standard reduced motion reset */
-    animation-duration: 0.01ms !important;
-    /* biome-ignore lint/complexity/noImportantStyles: Standard reduced motion reset */
-    animation-iteration-count: 1 !important;
-    /* biome-ignore lint/complexity/noImportantStyles: Standard reduced motion reset */
-    transition-duration: 0.01ms !important;
-    /* biome-ignore lint/complexity/noImportantStyles: Standard reduced motion reset */
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 }
 
