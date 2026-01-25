@@ -1,12 +1,18 @@
 .section {
-  padding: 100px 60px;
+  padding: 60px 24px;
   border-bottom: 1px solid var(--border-color);
   container: experience / inline-size;
 }
 
+@media (min-width: 769px) {
+  .section {
+    padding: 100px 60px;
+  }
+}
+
 .experienceGrid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: start;
   margin-top: 40px;
@@ -14,17 +20,10 @@
 
 .timeline {
   position: relative;
-  /* Removed max-width restriction to fill grid column */
 }
 
 .imageWrapper {
-  position: sticky;
-  display: flex;
-  justify-content: center;
-  top: 100px; /* Stats visible when scrolling */
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 20px 20px 0 var(--border-color);
+  display: none;
 }
 
 .experienceImage {
@@ -106,21 +105,17 @@
   line-height: 1.6;
 }
 
-@container experience (max-width: 900px) {
+@container experience (min-width: 901px) {
   .experienceGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr 1fr;
   }
   .imageWrapper {
-    display: none;
-    order: 2;
-    position: static;
-    margin-top: 40px;
-    box-shadow: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 24px;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    top: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 20px 20px 0 var(--border-color);
   }
 }

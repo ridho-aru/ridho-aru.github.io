@@ -1,5 +1,5 @@
 .section {
-  padding: 100px 60px;
+  padding: 60px 24px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -26,34 +26,36 @@
 }
 
 .bgBottomRight {
-  right: -50px;
+  width: 400px;
+  height: 400px;
+  right: -100px;
   bottom: -50px;
-  width: 600px;
-  height: 600px;
   transform: rotate(-15deg);
 }
 
 .bgTopLeft {
-  left: -100px;
-  top: -100px;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
+  left: -80px;
+  top: -80px;
   transform: rotate(15deg);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
+  .section {
+    padding: 100px 60px;
+  }
   .bgBottomRight {
-    width: 400px;
-    height: 400px;
-    right: -100px;
+    width: 600px;
+    height: 600px;
+    right: -50px;
     bottom: -50px;
   }
-
   .bgTopLeft {
-    width: 300px;
-    height: 300px;
-    left: -80px;
-    top: -80px;
+    width: 500px;
+    height: 500px;
+    left: -100px;
+    top: -100px;
   }
 }
 
@@ -108,7 +110,7 @@
 }
 
 .heroTitle {
-  font-size: 64px;
+  font-size: 36px;
   font-weight: 900;
   color: var(--text-primary);
   line-height: 1.1;
@@ -117,7 +119,7 @@
 }
 
 .heroSubtitle {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 24px;
@@ -141,6 +143,10 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.heroActions > a {
+  flex: 1 1 auto;
 }
 
 .primaryBtn,
@@ -175,28 +181,23 @@
   background-color: var(--border-color);
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 481px) {
+  .heroActions > a {
+    flex: initial;
+  }
+}
+
+@media (min-width: 769px) {
   .heroTitle {
     font-size: 48px;
   }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 24px;
-  }
-  .heroTitle {
-    font-size: 36px;
-  }
   .heroSubtitle {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
-@media (max-width: 480px) {
-  .heroActions {
-    & > a {
-      flex: 1 1 auto;
-    }
+@media (min-width: 1025px) {
+  .heroTitle {
+    font-size: 64px;
   }
 }
