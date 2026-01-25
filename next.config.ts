@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: "/my-portfolio",
   reactCompiler: true,
+  experimental: {
+    optimizeCss: true, // Requires 'critters' package
+  },
   images: {
     unoptimized: true,
     domains: ["img.icons8.com"],
