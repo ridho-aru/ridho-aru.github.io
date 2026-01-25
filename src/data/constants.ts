@@ -62,8 +62,8 @@ export const SKILLS = {
 export const EXPERIENCES = [
   {
     period: "2021 - Present",
-    role: "Senior Frontend Web Developer",
-    company: "Remote",
+    role: "Senior Frontend Web Developer at Rollingglory",
+    company: "Bandung, Remote",
     points: [
       "Reviewing code quality and ensuring best practices",
       "Developing scalable e-commerce platforms",
@@ -75,8 +75,8 @@ export const EXPERIENCES = [
   },
   {
     period: "February 2019 — August 2021",
-    role: "Middle Web Developer",
-    company: "Universitas Negeri Jakarta, DKI Jakarta",
+    role: "Middle Web Developer at Universitas Negeri Jakarta",
+    company: "DKI Jakarta",
     points: [
       "Analyzing Program Codes",
       "Giving advice on good algorithms and clean codes",
@@ -86,8 +86,8 @@ export const EXPERIENCES = [
   },
   {
     period: "June 2018 — February 2019",
-    role: "Junior Web Developer",
-    company: "Universitas Negeri Jakarta, DKI Jakarta",
+    role: "Junior Web Developer at Universitas Negeri Jakarta",
+    company: "DKI Jakarta",
     points: [
       "Developing college tuition system",
       "Website maintenance",
