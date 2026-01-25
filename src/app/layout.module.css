@@ -1,0 +1,39 @@
+.container {
+  /* Variables - Scope to container which wraps everything */
+  --primary-color: #3b82f6; /* Blue 500 */
+  --secondary-color: #6366f1; /* Indigo 500 */
+  --bg-color: #f9fafb; /* Gray 50 */
+  --sidebar-bg: #111827; /* Gray 900 */
+  --text-primary: #1f2937; /* Gray 800 */
+  --text-secondary: #4b5563; /* Gray 600 */
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: var(--font-geist-sans), sans-serif;
+  color: var(--text-secondary);
+}
+
+.main {
+  margin-left: 280px;
+  flex-grow: 1;
+  width: calc(100% - 280px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+}

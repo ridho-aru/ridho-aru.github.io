@@ -1,0 +1,141 @@
+.section {
+  padding: 100px 60px;
+  border-bottom: 1px solid var(--border-color);
+  container: about / inline-size;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.textLg {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.infoItem {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.aboutImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 20px 20px 0 var(--border-color);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 40px;
+  left: -40px;
+  background: var(--primary-color);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.years {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.badgeText {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Container Query Logic */
+@container about (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+  .aboutImageWrapper {
+    place-self: center;
+    width: unset;
+    height: 400px;
+    order: -1;
+    margin-bottom: 40px;
+  }
+  .aboutImage {
+    object-fit: contain;
+  }
+  .experienceBadge {
+    left: -40px;
+    bottom: 20px;
+  }
+}
+
+@container about (max-width: 600px) {
+  .aboutImageWrapper {
+    height: 350px;
+  }
+  .section {
+    padding: 60px 24px;
+  }
+  .experienceBadge {
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px 24px;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+/* Fallback / Viewport specific adjustments if container query support is concern, 
+   but since user asked for container queries, we prioritize that. 
+   We keep global padding responsive to viewport or container. 
+   Since .section IS the container, it cannot query itself for padding. 
+   So padding logic stays in media query.
+*/
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 24px;
+  }
+}
