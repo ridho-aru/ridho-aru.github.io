@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import profileImg from '@/assets/profile-1.webp';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import styles from './About.module.css';
@@ -35,15 +34,22 @@ export default function About() {
           </div>
         </div>
         <div className={styles.aboutImageWrapper}>
-          <Image
-            src={profileImg}
-            alt="Working portrait"
-            className={styles.aboutImage}
-            width={400}
-            height={500}
-            sizes="(min-width: 901px) 400px, 350px"
-            priority
-          />
+          <picture>
+            <source
+              media="(min-width: 901px)"
+              srcSet={profileImg.src}
+              width="400"
+              height="500"
+            />
+            <img
+              src={profileImg.src}
+              alt="Working portrait"
+              className={styles.aboutImage}
+              width="350"
+              height="437"
+              loading="lazy"
+            />
+          </picture>
           <div className={styles.experienceBadge}>
             <span className={styles.years}>2+</span>
             <span className={styles.badgeText}>Years Experience</span>
