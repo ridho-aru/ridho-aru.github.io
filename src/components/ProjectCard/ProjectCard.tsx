@@ -7,6 +7,7 @@ import styles from './ProjectCard.module.css';
 export interface ProjectItem {
   title: string;
   category: string;
+  description: string;
   tech: string[];
   images: StaticImageData[];
   link?: string;
@@ -76,6 +77,7 @@ export default function ProjectCard({ item }: { item: ProjectItem }) {
       <div className={styles.projectInfo}>
         <span className={styles.projectCategory}>{item.category}</span>
         <h3 className={styles.projectTitle}>{item.title}</h3>
+        <p className={styles.projectDescription}>{item.description}</p>
         <div className={styles.projectTechStack}>
           {item.tech.map((t) => (
             <span key={t} className={styles.projectTech}>
