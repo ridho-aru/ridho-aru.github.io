@@ -2,7 +2,11 @@ import profileImg from '@/assets/profile-1.webp';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import styles from './About.module.css';
 
+const JOURNEY_START_YEAR = 2018;
+
 export default function About() {
+  const experienceYears = new Date().getFullYear() - JOURNEY_START_YEAR;
+
   return (
     <section id="about" className={styles.section}>
       <SectionHeader title="About Me" />
@@ -11,8 +15,8 @@ export default function About() {
         <div>
           <p className={styles.textLg}>
             Passionate about creating intuitive and dynamic user experiences. My
-            journey in web development started 2+ years ago, exploring the vast
-            landscape of JavaScript libraries and frameworks.
+            journey in web development started {experienceYears}+ years ago,
+            exploring the vast landscape of JavaScript libraries and frameworks.
           </p>
           <p className={styles.text}>
             While my expertise lies in Front End development using React and
@@ -51,7 +55,7 @@ export default function About() {
             />
           </picture>
           <div className={styles.experienceBadge}>
-            <span className={styles.years}>2+</span>
+            <span className={styles.years}>{experienceYears}+</span>
             <span className={styles.badgeText}>Years Experience</span>
           </div>
         </div>
