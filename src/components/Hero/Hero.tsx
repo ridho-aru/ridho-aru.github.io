@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div className={styles.heroContent}>
         <span className={styles.greeting}>👋 Hello, I'm</span>
-        <h1 className={styles.heroTitle}>Achmad Ahlar Ridha</h1>
+        <h1 className={styles.heroTitle}>Achmad Ahlar Ridha (Aar)</h1>
         <h2 className={styles.heroSubtitle}>
           Building digital experiences with{' '}
           <span className={styles.accent}>Code</span> &{' '}
